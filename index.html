@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript">
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const filename = urlParams.get('filename')
+        if (filename > "") {
+            $(window).load(function(){
+        document.getElementById("messenger").value = filename;
+        document.sender.submit();
+        });
+        } else {
+        document.getElementsByClassName("title").value = "Podany został zły parametr";
+        }
+    </script> 
+    <style>
+        a {
+            color: white
+        }
+        
+        a:hover {
+            color:wheat
+        }
+    </style>
+    <title>Konwersja XLS do PDF</title>
+</head>
+<body class="bg-dark">
+        <div class="jumbotron pt-5 text-center w-auto bg-secondary">
+            <h1 class="title text-white-50">Controlpanel</h1>
+        </div>
+        <form name="sender" action="main.py" method="post">
+            <input type="hidden" name="filename" value="" id="messenger">
+        </form>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h5><a href="links.py">Generowanie wszystkich linków do pliku tekstowego</a></h5>
+                </div>
+                <div class="col-xs-6" style="padding-left: 30%;">
+                    <h5><a href="C_All.py">Konwertowanie wszystkich plików</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pt-5 bg-dark">
+    <h1 class="text-center text-white-50">Testowe linki:</h1>
+        <ul class="list-group text-center bg-dark pt-5">
+            <li class="list-group-item bg-danger"><a href="?filename=sap_xlsm_.xlsm">sap_xlsm_.xlsm</a></li>
+            <li class="list-group-item bg-danger"><a href="?filename=K-G02-FO-ODR-041F_karta_modelu_szyby_laminowanej.xlsx">K-G02-FO-ODR-041F_karta_modelu_szyby_laminowanej.xlsx</a></li>
+            <li class="list-group-item bg-danger"><a href="?filename=sap_xls_.xls">sap_xls_.xls</a></li>
+            <li class="list-group-item bg-danger"><a href="?filename=123.xls">Przypadek pliku, który nie istnieje: 123.xls</a></li>
+            <li class="list-group-item bg-danger"><a href="?filename=123.pdf">Przypadek pliku, który nie istnieje: 123.pdf</a></li>
+        </ul>
+    </div>
+</body>

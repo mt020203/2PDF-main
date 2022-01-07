@@ -1,0 +1,8 @@
+localhost/?filename=K-G02-FO-ODR-037F_karta_modelu_szyby_pojedynczej.xlsx
+localhost/?filename=K-G02-FO-ODR-038F_karta_modelu_szyby_izolowanej.xlsx
+localhost/?filename=K-G02-FO-ODR-039F_karta_modelu_szyby_ogrzewanej.xlsx
+localhost/?filename=K-G02-FO-ODR-041F_karta_modelu_szyby_laminowanej.xlsx
+localhost/?filename=K-G02-FO-ODR-056D_karta_modelu_szyby_kompletowanej.xlsx
+localhost/?filename=sap_xlsx_.xlsx
+localhost/?filename=sap_xlsm_.xlsm
+localhost/?filename=sap_xls_.xls
